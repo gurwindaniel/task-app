@@ -4,12 +4,22 @@ require('dotenv').config()
 const port =process.env.PORT || 3000
 
 
+//middleware javascript and css file
+app.use('/public',express.static('public'))
 
-//sending response
+// Setting up ejs engine
 
+app.set('view engine','ejs')
+
+
+
+//sending response - Home page
 app.get('/',async(req,res)=>{
 
-    res.send("Server running with changes - auto update 2")
+res.render('home', {home:{
+    name:"task app"
+}})
+  
 })
 
 // Listening to port

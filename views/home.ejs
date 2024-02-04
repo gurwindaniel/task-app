@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    <%- include('./head.ejs') %>
-   <%- include('./nav.ejs') %>
+   
     <title>Home Page</title>
 </head>
 <body>
+  <%- include('./nav.ejs') %>
     <h1>Dashboard</h1>
     <h2><%= home.name %> </h2>
-    <%- include('./modal.ejs') %>
+    <h2><%= home.date_time %> </h2>
+    
 
-  <%- include('./tail.ejs') %>
+  
   <button class="btn btn-primary">submit</button>
+  <%- include('./tail.ejs') %>
 </body>
 </html>
